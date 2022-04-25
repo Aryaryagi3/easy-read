@@ -7,7 +7,7 @@ Aplicativo onde usuários poderão ler e escrever livros de forma rápida e fác
 - Detalhes do livro serão apresentados, como: título, autor, gênero, número de capítulos e volumes, e sinopse.
 - Escrever e publicar seus próprios livros também é possível.
 
-# Protótipos de telas
+# Protótipo de telas
 https://www.figma.com/proto/3uxJ7Ech4v8ZXiT7U4Bx6I/Untitled?node-id=4%3A3&scaling=scale-down&page-id=4%3A2&starting-point-node-id=4%3A3
 
 # Cronograma de desenvolvimento
