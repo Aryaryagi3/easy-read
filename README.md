@@ -11,6 +11,6 @@ Aplicativo onde usuários poderão ler e escrever livros de forma rápida e fác
 https://www.figma.com/proto/3uxJ7Ech4v8ZXiT7U4Bx6I/Untitled?node-id=4%3A3&scaling=scale-down&page-id=4%3A2&starting-point-node-id=4%3A3
 
 # Cronograma de desenvolvimento
-AA1 - Será implementado a navegação e a estilização.
-AA2 - Será implementado o sistema de persistência de dados.
-Projeto Final - Serão implementados algumas melhorias, como: alert e REST API.
+- AA1 - Será implementado a navegação e a estilização.
+- AA2 - Será implementado o sistema de persistência de dados.
+- Projeto Final - Serão implementados algumas melhorias, como: alert e REST API.
