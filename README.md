@@ -12,5 +12,5 @@ https://www.figma.com/proto/3uxJ7Ech4v8ZXiT7U4Bx6I/Untitled?node-id=4%3A3&scalin
 
 # Cronograma de desenvolvimento
 - AA1 - Será implementado a navegação e a estilização.
-- AA2 - Será implementado o sistema de persistência de dados.
+- AA2 - Será implementado o sistema de persistência de dados e Action Sheet.
 - Projeto Final - Serão implementados algumas melhorias, como: alert e REST API.
