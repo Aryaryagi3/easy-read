@@ -8,7 +8,7 @@ Aplicativo onde usuários poderão ler e escrever livros de forma rápida e fác
 - Escrever e publicar seus próprios livros também é possível.
 
 # Protótipo de telas
-https://www.figma.com/proto/3uxJ7Ech4v8ZXiT7U4Bx6I/Untitled?node-id=4%3A3&scaling=scale-down&page-id=4%3A2&starting-point-node-id=4%3A3
+https://www.figma.com/proto/3uxJ7Ech4v8ZXiT7U4Bx6I/Untitled?node-id=4%3A3&starting-point-node-id=4%3A3
 
 # Cronograma de desenvolvimento
 - AA1 - Será implementado a navegação e a estilização.
