@@ -19,5 +19,3 @@ https://www.figma.com/proto/3uxJ7Ech4v8ZXiT7U4Bx6I/Untitled?node-id=4%3A3&starti
 - O link agora não da mais acesso negado.
 - O projeto foi consertado em conjunto com o professor, agora ele roda.
 - Foram feitos atualizações de todos os pacotes do projeto.
-- Foi utilizado o método SQLite para a persistência de dados.
-- Os modelos a serem armazenados são Livro e Capítulo.
