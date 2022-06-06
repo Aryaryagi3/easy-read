@@ -7,10 +7,15 @@ import {
   Text,
 } from "react-native";
 import React from "react";
+import GlobalStyle from "../../assets/styles/global";
+import {FontAwesome5} from "@expo/vector-icons";
 
 export default function YourWork(props) {
   return (
     <SafeAreaView>
+      <View style={GlobalStyle.plusIcon}>
+        <FontAwesome5 name="plus" size={24} color="white" />
+      </View>
       <TouchableOpacity
         onPress={() => {
           props.navigation.push("Sua obra");
@@ -30,10 +35,6 @@ export default function YourWork(props) {
               <View>
                 <Text>Gênero</Text>
                 <Text>Lorem ipsum</Text>
-              </View>
-              <View>
-                <Text>Volumes</Text>
-                <Text>2</Text>
               </View>
               <View>
                 <Text>Capítulos</Text>

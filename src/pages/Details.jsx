@@ -13,6 +13,8 @@ import GlobalStyle from "../../assets/styles/global";
 import ListChapters from "../components/ListChapters";
 
 export default function Details(props) {
+
+
   return (
     <SafeAreaView style={GlobalStyle.container}>
       <View>
@@ -27,10 +29,6 @@ export default function Details(props) {
             <View>
               <Text>Gênero</Text>
               <Text>Lorem ipsum</Text>
-            </View>
-            <View>
-              <Text>Volumes</Text>
-              <Text>2</Text>
             </View>
             <View>
               <Text>Capítulos</Text>
