@@ -28,7 +28,7 @@ export default function YourWorkDetails(props) {
 
     const remove = () => {
         Book.remove(id,{
-        })
+        }).then(id => props.navigation.push("Suas obras", {id: id}))
             .catch((err) => console.log(err));
     };
 
@@ -72,7 +72,7 @@ export default function YourWorkDetails(props) {
   };
 
   return (
-      <SafeAreaView style={styles.container}>
+      <SafeAreaView  style={GlobalStyle.container}>
         <View>
           <View>
             <Text>Título da obra</Text>
@@ -100,11 +100,11 @@ export default function YourWorkDetails(props) {
               props.navigation.push("Novo Capítulo", {id: id});
             }}
         >
-          <View style={GlobalStyle.searchIcon}>
+          <View style={GlobalStyle.plusIcon}>
             <FontAwesome5 name="plus" size={24} color="white" />
           </View>
         </TouchableOpacity>
-        <Text>Capítulos:</Text>
+        <Text style={styles.chapter}>Capítulos:</Text>
         <ListChapters props={props} id={id} mode={"Escrever"}/>
       </SafeAreaView>
   );
@@ -114,4 +114,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
+    chapter: {
+        fontSize: 25
+    }
 });

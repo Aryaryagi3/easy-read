@@ -4,10 +4,12 @@ import {
   TextInput,
   View,
   Text, Button, Alert,
+  KeyboardAvoidingView, StyleSheet,
 } from "react-native";
 import React, {useEffect, useState} from "react";
 import Chapter from "../services/sqlite/Chapter"
 import Book from "../services/sqlite/Book";
+import GlobalStyle from "../../assets/styles/global";
 
 export default function Write(props) {
   const [chapterName, setChapterName] = React.useState("");
@@ -63,28 +65,37 @@ export default function Write(props) {
 
   const remove = () => {
     Chapter.remove(id,{
-    })
+    }).then(id => props.navigation.push("Sua obra", {id: id}))
         .catch((err) => console.log(err));
   };
 
   return (
-      <SafeAreaView>
+      <SafeAreaView style={GlobalStyle.container}>
         <View>
+          <Button
+              onPress={send}
+              title="Enviar"
+          />
+          <Button
+              onPress={confirm}
+              title="Remover capítulo"
+          />
           <Text>Nome do capítulo:</Text>
           <TextInput onChangeText={setChapterName} value={chapterName} />
           <Text>Volume:</Text>
           <TextInput onChangeText={setVolume} value={volume} />
           <Text>Conteúdo:</Text>
-          <TextInput onChangeText={setContent} value={content} />
+          <TextInput style={styles.input} numberOfLines={20} multiline onChangeText={setContent} value={content} />
         </View>
-        <Button
-            onPress={send}
-            title="Enviar"
-        />
-        <Button
-            onPress={confirm}
-            title="Remover capítulo"
-        />
+
       </SafeAreaView>
   );
 }
+
+
+const styles = StyleSheet.create({
+  input: {
+    textAlignVertical: 'top',
+  },
+});
+

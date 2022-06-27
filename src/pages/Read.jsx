@@ -5,6 +5,7 @@ import ListBooks from "../components/ListBooks";
 
 import { FontAwesome5 } from "@expo/vector-icons";
 import Chapter from "../services/sqlite/Chapter";
+import GlobalStyle from "../../assets/styles/global";
 
 export default function Read(props) {
   const [data, setData] = useState([]);
@@ -23,7 +24,7 @@ export default function Read(props) {
   }, []);
 
   return (
-      <SafeAreaView>
+      <SafeAreaView style={GlobalStyle.container}>
         <View>
           <Text>{data.chapter_name}</Text>
           <Text>

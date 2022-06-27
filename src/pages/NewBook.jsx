@@ -26,7 +26,7 @@ export default function NewBook(props) {
     };
 
     return (
-        <SafeAreaView>
+        <SafeAreaView style={GlobalStyle.container}>
             <View>
                 <Text>Título:</Text>
                 <TextInput onChangeText={setTitle} value={title} />

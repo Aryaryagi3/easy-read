@@ -13,13 +13,13 @@ import ListBooks from "../components/ListBooks";
 
 export default function YourWork(props) {
   return (
-      <SafeAreaView>
+      <SafeAreaView style={GlobalStyle.container}>
         <TouchableOpacity
             onPress={() => {
               props.navigation.push("Novo livro");
             }}
         >
-          <View style={GlobalStyle.searchIcon}>
+          <View style={GlobalStyle.plusIcon}>
             <FontAwesome5 name="plus" size={24} color="white" />
           </View>
         </TouchableOpacity>
