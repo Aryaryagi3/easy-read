@@ -31,3 +31,6 @@ https://www.figma.com/proto/3uxJ7Ech4v8ZXiT7U4Bx6I/Untitled?node-id=4%3A3&starti
 
 # Recurso inédito
 - Implementado animação básica, utilizando o Animation do react native.
+
+# Link para o APK
+https://easyupload.io/mjc7rm
