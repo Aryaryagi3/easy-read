@@ -27,11 +27,11 @@ export default function Write(props) {
 
   const confirm = () => {
     Alert.alert("Confirmação",
-        "Deseja mesmo fazer essas alterações??",
+        "Deseja mesmo remover o capítulo?",
         [
           {
             text: "Sim",
-            onPress: () => send()
+            onPress: () => remove()
           },
           {
             text: "Não",
@@ -60,6 +60,13 @@ export default function Write(props) {
         .catch((err) => console.log(err));
   };
 
+
+  const remove = () => {
+    Chapter.remove(id,{
+    })
+        .catch((err) => console.log(err));
+  };
+
   return (
       <SafeAreaView>
         <View>
@@ -71,8 +78,12 @@ export default function Write(props) {
           <TextInput onChangeText={setContent} value={content} />
         </View>
         <Button
-            onPress={confirm}
+            onPress={send}
             title="Enviar"
+        />
+        <Button
+            onPress={confirm}
+            title="Remover capítulo"
         />
       </SafeAreaView>
   );

@@ -12,6 +12,7 @@ import ListChapters from "../components/ListChapters";
 import Book from "../services/sqlite/Book";
 import GlobalStyle from "../../assets/styles/global";
 import {FontAwesome5} from "@expo/vector-icons";
+import Chapter from "../services/sqlite/Chapter";
 
 export default function YourWorkDetails(props) {
   const {id} = props.route.params;
@@ -25,13 +26,19 @@ export default function YourWorkDetails(props) {
     });
   };
 
+    const remove = () => {
+        Book.remove(id,{
+        })
+            .catch((err) => console.log(err));
+    };
+
   const confirm = () => {
     Alert.alert("Confirmação",
-        "Deseja mesmo fazer essas alterações??",
+        "Deseja mesmo remover o livro?",
         [
           {
             text: "Sim",
-            onPress: () => send()
+            onPress: () => remove()
           },
           {
             text: "Não",
@@ -81,9 +88,13 @@ export default function YourWorkDetails(props) {
           </View>
         </View>
         <Button
-            onPress={confirm}
+            onPress={send}
             title="Enviar"
         />
+          <Button
+              onPress={confirm}
+              title="Remover livro"
+          />
         <TouchableOpacity
             onPress={() => {
               props.navigation.push("Novo Capítulo", {id: id});
