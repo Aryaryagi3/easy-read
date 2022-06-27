@@ -1,6 +1,11 @@
 # easy-read
 Aplicativo onde usuários poderão ler e escrever livros de forma rápida e fácil.
 
+# Capturas de tela
+
+![Screenshot_20220627-172926](https://user-images.githubusercontent.com/86446096/176031153-addad5bf-d7ca-4c2e-8ac5-517b0669ea03.png)
+![Screenshot_20220627-173054 (1)](https://user-images.githubusercontent.com/86446096/176031169-2c973096-69b6-4cb2-8363-4c5126347af1.png)
+
 # Funcionalidades
 - O aplicativo recomenda livros para o usuário.
 - Detalhes do livro serão apresentados, como: título, autor.
@@ -28,9 +33,11 @@ https://www.figma.com/proto/3uxJ7Ech4v8ZXiT7U4Bx6I/Untitled?node-id=4%3A3&starti
 - ActionSheet foi utilizado para apresentar as opções acima.
 - Animação básica implementada.
 - APK realizado com sucesso.
+-.gitignore adicionado ao repositorio.
+- Todas as telas possuem nomes diferentes agora.
 
 # Recurso inédito
 - Implementado animação básica, utilizando o Animation do react native.
 
 # Link para o APK
-https://easyupload.io/mjc7rm
+https://easyupload.io/wh91mx
