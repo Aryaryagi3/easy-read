@@ -6,40 +6,51 @@ import {
   View,
   Text,
 } from "react-native";
-import React from "react";
+import React, {useEffect, useState} from "react";
 
 import GlobalStyle from "../../assets/styles/global";
 
 import ListChapters from "../components/ListChapters";
+import Book from "../services/sqlite/Book";
+import Chapter from "../services/sqlite/Chapter";
 
 export default function Details(props) {
+
+  const { id } = props.route.params;
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  const getData = () => {
+    let query = Book.find(id);
+    query.then((result) => {
+      setData(result);
+    });
+  };
+
   return (
-    <SafeAreaView style={GlobalStyle.container}>
-      <View>
-        <Text>Lorem ipsum dolor sit amet</Text>
+      <SafeAreaView style={GlobalStyle.container}>
         <View>
-          <Image source={require("../../assets/images/book-cover.jpg")}></Image>
+          <Text>{data.title}</Text>
           <View>
+            <Image source={require("../../assets/images/book-cover.jpg")}></Image>
             <View>
-              <Text>Autor</Text>
-              <Text>Lorem ipsum</Text>
-            </View>
-            <View>
-              <Text>Gênero</Text>
-              <Text>Lorem ipsum</Text>
-            </View>
-            <View>
-              <Text>Volumes</Text>
-              <Text>2</Text>
-            </View>
-            <View>
-              <Text>Capítulos</Text>
-              <Text>20</Text>
+              <View>
+                <Text>Autor</Text>
+                <Text>{data.author}</Text>
+              </View>
+              <View>
+                <Text>Gênero</Text>
+                <Text>{data.genre}</Text>
+              </View>
             </View>
           </View>
         </View>
-        <ListChapters props={props} title={"Ler"} />
-      </View>
-    </SafeAreaView>
+        <Text>Capítulos:</Text>
+        <ListChapters props={props} id={id} mode={"Ler"}/>
+      </SafeAreaView>
   );
 }

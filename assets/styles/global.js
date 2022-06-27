@@ -93,4 +93,13 @@ export default StyleSheet.create({
     fontWeight: "bold",
     marginBottom: 10,
   },
+  modal: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "space-between",
+    margin: 24,
+    borderRadius: 8,
+    backgroundColor: "white",
+    marginVertical: 64
+  }
 });

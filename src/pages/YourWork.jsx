@@ -7,42 +7,25 @@ import {
   Text,
 } from "react-native";
 import React from "react";
+import GlobalStyle from "../../assets/styles/global";
+import {FontAwesome5} from "@expo/vector-icons";
+import ListBooks from "../components/ListBooks";
 
 export default function YourWork(props) {
   return (
-    <SafeAreaView>
-      <TouchableOpacity
-        onPress={() => {
-          props.navigation.push("Sua obra");
-        }}
-      >
-        <View>
-          <Text>Lorem ipsum dolor sit amet</Text>
-          <View>
-            <Image
-              source={require("../../assets/images/book-cover.jpg")}
-            ></Image>
-            <View>
-              <View>
-                <Text>Autor</Text>
-                <Text>Lorem ipsum</Text>
-              </View>
-              <View>
-                <Text>Gênero</Text>
-                <Text>Lorem ipsum</Text>
-              </View>
-              <View>
-                <Text>Volumes</Text>
-                <Text>2</Text>
-              </View>
-              <View>
-                <Text>Capítulos</Text>
-                <Text>20</Text>
-              </View>
-            </View>
+      <SafeAreaView>
+        <TouchableOpacity
+            onPress={() => {
+              props.navigation.push("Novo livro");
+            }}
+        >
+          <View style={GlobalStyle.searchIcon}>
+            <FontAwesome5 name="plus" size={24} color="white" />
           </View>
+        </TouchableOpacity>
+        <View>
+          <ListBooks props={props} mode={"Sua obra"}/>
         </View>
-      </TouchableOpacity>
-    </SafeAreaView>
+      </SafeAreaView>
   );
 }
