@@ -56,6 +56,7 @@ export default StyleSheet.create({
     borderRadius: 50,
     alignSelf: "center",
     marginBottom: 10,
+    marginTop: 10
   },
   bookShelfText: {
     alignSelf: "center",
@@ -101,5 +102,9 @@ export default StyleSheet.create({
     borderRadius: 8,
     backgroundColor: "white",
     marginVertical: 64
-  }
+  },
+  volume: {
+    fontSize: 20,
+    color: "#B85042",
+  },
 });
