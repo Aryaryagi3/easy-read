@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { TouchableOpacity, SectionList, View, Text } from "react-native";
-
+import {TouchableOpacity, SectionList, View, Text, StyleSheet} from "react-native";
+import GlobalStyle from "../../../assets/styles/global";
 import Chapter from "../../services/sqlite/Chapter";
 import listToSectionList from "../../helpers/listToSectionList";
 
@@ -40,7 +40,7 @@ export default function ListChapters(props) {
                 sections={chapters}
                 keyExtractor={(item) => item.id.toString()}
                 renderItem={({ item }) => <Item item={item} />}
-                renderSectionHeader={({ section: { volume } }) => <Text>{volume}</Text>}
+                renderSectionHeader={({ section: { volume } }) => <Text style={GlobalStyle.volume}>{volume}</Text>}
             />
         </View>
     );
